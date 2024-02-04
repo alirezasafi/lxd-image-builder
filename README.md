@@ -1,23 +1,23 @@
-# LXD Image Builder Tool
+# LXD Image Builder
 
 ## Introduction
-LXD Image Builder Tool is an innovative command-line utility designed to simplify the process of creating and managing LXD (Linux Containers) images, specifically tailored for Ubuntu distributions. Mimicking the simplicity and efficiency of a Dockerfile for Docker, this tool introduces a declarative syntax allowing users to define and build custom LXD images with ease.
+LXD Image Builder is an innovative command-line utility designed to simplify the process of creating and managing LXD (Linux Containers) images, specifically tailored for Ubuntu distributions. Mimicking the simplicity and efficiency of a Dockerfile for Docker, this tool introduces a declarative syntax allowing users to define and build custom LXD images with ease.
 
 ## Features
 This tool supports a variety of commands (or functions) enabling a wide range of operations from image creation to exporting:
-- **ARG**: Define variables to be passed at build-time.
-- **FROM**: Bootstrap a Debian base system from archive.ubuntu.com.
-- **RUN**: Execute commands within the chroot of the target system.
-- **EXEC**: Execute commands directly in a running LXC container.
-- **ADD**: Copy files or directories from the host to the destination path in the image.
-- **IMPORT**: Compress the target Debian system into a tar file and import it with `metadata.yaml`.
-- **LAUNCH**: Launch a container from an imported image.
-- **PUBLISH**: Export an image from a running LXC container.
-- **EXPORT**: Export an image to a compressed tar file.
+- **ARG**: define variables to be passed at build-time.
+- **FROM**: bootstrap a Debian base system from archive.ubuntu.com.
+- **RUN**: execute commands within the chroot of the target system.
+- **EXEC**: execute commands directly in a running LXC container.
+- **ADD**: copy files or directories from the host to the destination path in the image.
+- **IMPORT**: compress the target Debian system into a tar file and import it with `metadata.yaml`.
+- **LAUNCH**: launch a container from an imported image.
+- **PUBLISH**: export an image from a running LXC container.
+- **EXPORT**: export an image to a compressed tar file.
 
 
 ## Usage
-The LXD Image Builder Tool simplifies the creation and management of LXD images. Below is a step-by-step guide to using this tool, highlighted by a detailed example based on the sample file you've provided.
+The LXD Image Builder simplifies the creation and management of LXD images. Below is a step-by-step guide to using this tool, highlighted by a detailed example based on the sample file you've provided.
 
 ### Defining Your Image
 Create a definition file (e.g., `lxd-image-template.sh`) and use the supported commands to define your image. Here's an example structure based on the sample file:
@@ -82,7 +82,6 @@ EXPORT $IMAGE_NAME
 ```
 
 ### Build Your Image
-To build your image, execute the LXD Image Builder Tool with your definition file as an argument:
 
 ```bash
 chmod +x lxd-image-template.sh
